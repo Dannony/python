@@ -1,0 +1,9 @@
+feijao;3.5;3.0
+frango;5.5;6.0
+tainha;5.0;6.0
+vinho;12.0;15.0
+eeee;2.0;3.0
+muito se;3.0;6.0
+arroz;2.29;3.54
+has;2.0;4.0
+kal;7.0;8.0
