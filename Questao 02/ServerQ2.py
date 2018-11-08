@@ -20,7 +20,7 @@ def tratar_cliente(S_con,endereco_con):
             dados = S_con.recv(struct.calcsize(Pacote.P_PRO))
             elementos = struct.unpack(Pacote.P_PRO, dados)
 
-            produto = elementos[0].decode(Pacote.ENCODING).split('\x00',1)[0]
+            produto = elementos[0].decode(Pacote.ENCODING).split('\x00',1)[0] #remove os \x00 de preenchimento de espaços quando há sobras de caracteres,no tamanho do pacote.
             prel1 = round(elementos[1],2)
             prel2 = round(elementos[2],2)
             print('Executando Processo de Cadastro...')
@@ -32,7 +32,7 @@ def tratar_cliente(S_con,endereco_con):
         S_con.close()
     if ID == 2:
         print('Reunindo Informações da Lista de Produtos...')
-        lista = loja.lista_produto()
+        lista = loja.lista_produto() #a lista retorna uma matriz com todos os produtos. 
         tl = len(lista)
         for i in range(tl):
             produto = lista[i][0]
