@@ -32,7 +32,7 @@ def tratar_cliente(S_con,endereco_con):
         S_con.close()
     if ID == 2:
         print('Reunindo Informações da Lista de Produtos...')
-        lista = loja.lista_produto() #a lista retorna uma matriz com todos os produtos. 
+        lista = loja.lista_produto() #a loja retorna uma matriz com todos os produtos. 
         tl = len(lista)
         for i in range(tl):
             produto = lista[i][0]
