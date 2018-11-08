@@ -9,7 +9,7 @@ ID = 2
 QP = 0
 RID = struct.pack(Pacote.P_REQUEST,ID,QP)
 S_cliente.sendall(RID)
-while True:
+while True: #<< não e necessario
     Resposta = S_cliente.recv(struct.calcsize(Pacote.P_LISTA))
     elementos = struct.unpack(Pacote.P_LISTA, Resposta)
 
